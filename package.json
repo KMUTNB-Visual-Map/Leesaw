@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@nestjs/testing": "^11.1.14"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "typescript": "^5.9.3"
+  }
+}
