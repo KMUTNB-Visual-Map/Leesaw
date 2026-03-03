@@ -89,7 +89,8 @@ export class FindShortestPathService {
       SELECT
         node_id,
         floor_id,
-        geom
+        ST_X(geom) as x,
+        ST_Y(geom) as y
       FROM node
       WHERE node_id = ANY($1::int[])
       ORDER BY array_position($1::int[], node_id)
