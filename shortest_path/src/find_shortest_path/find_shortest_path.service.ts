@@ -19,7 +19,7 @@ export class FindShortestPathService {
       FROM node n
       JOIN floor f ON f.floor_id = n.floor_id
       LEFT JOIN node e 
-          ON e.node_type = 'elevator_' || f.floor_number
+          ON e.node_type = 'Elevator_level ' || f.floor_number || '_01'
       WHERE n.node_id IN (CAST($1 AS INTEGER), CAST($2 AS INTEGER))
       ORDER BY 
         CASE  
